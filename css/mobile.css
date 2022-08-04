@@ -1,0 +1,36 @@
+header {
+    height: 50px;
+}
+
+.top-head {
+    justify-content: space-between;
+}
+
+.list-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.list-icon,
+#nav ul {
+    display: block;
+}
+
+#time,
+#nav,
+.find {
+    display: none;
+}
+
+#nav ul li {
+    text-align: center;
+}
+
+#nav ul li:hover {
+    background: var(--color1);
+    border-bottom: none;
+}
+
+#nav ul li a:hover {
+    color: var(--color3);
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Refresh" content="1800"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tin tức công nghệ"/>
+    <meta name="keywords" content="hiện đại, xu hướng, tin tức, tin tức online, đọc báo, báo, tin, tin nhanh, genz, news, giới trẻ" />
+    <title>Gen-Z News- Trang tin tức dành cho giới trẻ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 778px)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-head flex width-main">
+            <div class="web-name">
+                <a href="#">
+                    <h1>GEN-Z NEWS</h1>
+                </a>
+            </div>
+
+            <div id="time"></div>
+
+            <div class="header-social">
+                <ul class="flex">
+                    <li><a href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands ti-android"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-apple"></i>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="list-icon" onclick="openNav()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="width-main">
+            <div class="hot-news flex">
+                <div class="hot-text">TIN MỚI CẬP NHẬT</div>
+                <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+                <p>
+                    <a href="https://genk.vn/huawei-mate40-ra-mat-voi-ten-goi-moi-co-ho-tro-5g-20220804163927078.chn" class="hot-content">
+                        Huawei Mate 40 ra mắt với tên gọi mới, có hỗ trợ 5G
+                    </a>
+
+                    <a href="https://vnexpress.net/tieu-chi-chon-laptop-cho-sinh-vien-4492262.html" class="hot-content">
+                        Tiêu chí chọn laptop cho sinh viên
+                    </a>
+
+                    <a href="https://vietnamnet.vn/he-sinh-thai-blockchain-solana-dang-that-thoat-hang-trieu-usd-do-bi-hack-2045899.html" class="hot-content">
+                        Hệ sinh thái blockchain Solana đang thất thoát hàng triệu USD do bị hack?
+                    </a>
+                    
+                    <a href="https://www.24h.com.vn/bong-da/bang-xep-hang-bong-da-anh-c48a466585.html" class="hot-content">
+                        Lịch thi đấu - BXH các giải VĐQG 2022 - 2023
+                    </a>
+
+                    <a href="https://vba.vn/news/game-32-saigon-heat-trang-tay-2-tran-san-nha-san-khach-truoc-nha-trang-dolphins" class="hot-content">
+                        Game 32: Saigon Heat trắng tay 2 trận sân nhà, sân khách trước Nha Trang Dolphins
+                    </a>
+
+                    <a href="https://webthethao.vn/esports/commonwealth-games-2022-buoc-thu-nghiem-cua-ioc-truoc-khi-dua-esports-vao-olympic-Hl60VEz4R.htm" class="hot-content">
+                        Commonwealth Games 2022: Bước thử nghiệm của IOC trước khi đưa Esports vào Olympic
+                    </a>
+
+                    <a href="https://laodong.vn/van-hoa/on-nghia-sinh-thanh-2022chuong-trinh-nghe-thuat-dac-biet-nhan-mua-vu-lan-1076202.ldo" class="hot-content">
+                        “Ơn nghĩa sinh thành 2022” - Chương trình nghệ thuật đặc biệt nhân mùa Vu Lan
+                    </a>
+
+                    <a href="https://vnexpress.net/chi-pu-dong-phim-kinh-di-muoi-4495751.html" class="hot-content">
+                        Chi Pu đóng phim kinh dị 'Mười'
+                    </a>
+
+                    <a href="https://vnexpress.net/ly-hai-khoi-dong-phim-lat-mat-6-4471339.html" class="hot-content">
+                        Lý Hải khởi động phim 'Lật mặt 6'
+                    </a>
+                </p>
+                </marquee>
+            </div>
+        </div>
+
+        <div class="width-main">
+            <div id="nav" class="menu flex">
+                <ul class ="flex nav-bar">
+                    <li><a href="#">TRANG CHỦ</a></li>
+                    <li>
+                        <a href="#">CÔNG NGHỆ</a>
+                        <div class="sub-nav">
+                            <ul>
+                                <li><a href="#">Điện thoại</a></li>
+                                <li><a href="#">Laptop - PC</a></li>
+                                <li><a href="#">AI</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">THỂ THAO</a>
+                        <div class="sub-nav">
+                            <ul>
+                                <li><a href="#">Bóng đá</a></li>
+                                <li><a href="#">Bóng rổ</a></li>
+                                <li><a href="#">Esports</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">GIẢI TRÍ</a>
+                        <div class="sub-nav">
+                            <ul>
+                                <li><a href="">Gameshow</a></li>
+                                <li><a href="">Phim</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#contact" class="back">LIÊN HỆ</a></li>
+                </ul>
+
+                <div class="search">
+                    <div class="flex">
+                        <input type="text" placeholder="Tìm kiếm...">
+                        <a href="">
+                            <i class="fa-solid fa-magnifying-glass text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <a href="#" class="go">
+            <i class="fa-solid fa-angle-up"></i>
+        </a>
+
+        <section class="news-main">
+
+        </section>
+    </section>
+
+    <footer id="contact">
+        <div class="width-main flex">
+            <div class="footer-left">
+                <h1 class="title">Liên hệ</h1>
+                <div class="info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8166109,106.6763787,17z/data=!3m1!4b1!4m5!3m4!1s0x317528e195f816b7:0xfb5c0101490d8870!8m2!3d10.8165873!4d106.6786161?hl=vi-VN">
+                                371 Nguyễn Kiệm, Tp.HCM
+                            </a>                    
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            contact@genznews.vn
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            0919 435 885
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <ul class="flex">
+                        <li><a href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-brands ti-android"></i>
+                        </a></li>
+                        <li><a href="">
+                            <i class="fa-brands fa-apple"></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-mid-1">
+                <h1 class="title">Danh mục báo</h1>
+
+                <div class="pd-left">
+                    <ul>
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Công nghệ
+                        </li></a>
+
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Thể thao
+                        </li></a>
+
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Giải trí
+                        </li></a>
+
+                        <li class="sub-title">
+                            <h3>Quản lý dự án</h3>
+                        </li>
+
+                        <li class="author">
+                            <i class="fa-solid fa-user-pen"></i>
+                            Minh Liêm - Tuấn Kiệt
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-mid-2">
+                <h1 class="title">Hỗ trợ kỹ thuật</h1>
+
+                <div class="pd-left">
+                    <ul>
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Quyền riêng tư và Cookie
+                        </a></li>
+
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Điều khoản sử dụng
+                        </a></li>
+                        
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Điều khoản quảng cáo
+                        </a></li>
+
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Các nhãn hàng đối tác
+                        </a></li>
+
+                        <li><a href="#">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            Trợ giúp
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <h1 class="title">Gửi phản hồi</h1>
+                <p>Cập nhật tin tức và gửi ý kiến cho chúng tôi tại đây.</p>
+
+                <div class="mail">
+                    <div class="flex">
+                        <input type="text" placeholder="Nhập mail của bạn" id="body-mail" onkeypress="return enter(event)">
+                        <a href="#contact" onclick="sendMail()">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p>Copyright &copy; 2022. All Rights Reserved</p>      
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

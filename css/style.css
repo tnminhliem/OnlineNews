@@ -1,0 +1,381 @@
+:root {
+    --colorMain: gold;
+    --colorB: black;
+    --colorW: white;
+    --width: 80%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI","Segoe WP",Arial,Sans-Serif;
+    color: var(--colorW);
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.width-main {
+    width: var(--width);
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--colorB);
+}
+
+@keyframes doimau {
+    0% {
+      color: var(--colorMain);
+    }
+    20% {
+      color: lightblue;
+    }
+    40% {
+        color: orange;
+    }
+    60% {
+      color: #d61dee;
+    }
+    80% {
+        color: red;
+    }
+    100% {
+      color: var(--colorMain);
+    }
+}
+
+.top-head {
+    padding: 20px 0 0 0;
+}
+
+.web-name h1 {
+    animation: doimau 2s infinite;
+    font-family: 'Raleway', sans-serif;
+}
+
+.web-name h1:hover {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+#time {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20px;
+    padding-left: 15px;
+    border-left: 1px solid var(--colorMain);
+}
+
+.header-social {
+    margin-left: auto;
+}
+
+.header-social li:hover {
+    transition: all 0.5s;
+    transform: scale(1.3);
+    color: var(--colorMain);
+    padding-bottom: 10px;
+}
+
+.header-social .fa-brands {
+    margin: 0 10px;
+    font-size: 1.1rem;
+}
+
+.header-social li:hover .fa-brands {
+    color: var(--colorMain);
+}
+
+.list-icon {
+    display: none;
+}
+
+.hot-news {
+    margin-right: 15px;
+}
+
+.hot-text {
+    width: 300px;
+    font-size: 1rem;
+    padding: 40px;
+    color: var(--colorMain);
+    font-weight: 800;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.hot-content {
+    padding: 10px 50px;
+    color: var(--colorW);
+    font-weight: 600;
+    display: inline-block;
+}
+
+.hot-content:hover {
+    color: var(--colorMain);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.menu {
+    justify-content: space-between;
+}
+
+.menu li {
+    position: relative;
+    margin-right: 2px;
+}
+
+.nav-bar > li:first-child {
+    background-color: var(--colorMain);
+}
+
+.nav-bar li a {
+    display: block;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    width: 145px;
+    text-align: center;
+}
+
+.nav-bar li:hover {
+    background-color: var(--colorMain);
+}
+
+.sub-nav ul {
+    position: absolute;
+    display: none;
+    background-color: #252525;
+}
+
+.sub-nav li a {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* .nav-bar li:hover .sub-nav ul {
+    display: inline-block !important;
+} */
+
+.search > div {
+    height: 40px;
+    padding: 0 15px;
+    width: 230px;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+    margin-right: 10px;
+}
+
+.search > div input {
+    outline: none;
+    font-style: italic;
+    border: none;
+    color: var(--colorB);
+}
+
+.search a {
+    padding: 8px;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 0px;
+}
+
+.search a:hover,
+.search a:hover i {
+    background-color: var(--colorMain);
+    color: var(--colorW);
+} 
+
+.search i {
+    color: gold;
+}
+
+.go {
+    position: fixed;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: var(--colorMain);
+    border-radius: 4px;
+    line-height: 1.8;
+    font-size: 1.4rem;
+    z-index: 1;
+    transition: background 0.8s;
+    display: none;
+}
+
+.go:hover {
+    background-color: var(--colorB);
+}
+
+section {
+    height: 2000px;
+}
+
+footer {
+    background-color: var(--colorB);
+    padding: 60px 0;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+footer > div > div {
+    width: 25%;
+    height: 270px;
+}
+
+footer .title {
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    width: calc(var(--width) + 10%);
+    border-bottom: 3px double var(--colorW);
+    font-weight: 700;
+}
+
+.info li:hover a,
+.info li:first-child:hover i {
+    color: var(--colorMain);
+}
+
+.footer-social .fa-brands{
+    color: var(--colorB);
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 20px 10px 0 0;
+    width: 35px;
+    height: 35px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    background: var(--colorW);
+    border-radius: 4px;
+    line-height: normal;
+}
+
+.footer-social a:hover {
+    transition: all 0.5s;
+    transform: scale(1.3);
+}
+
+.footer-social a:hover i {
+    color: var(--colorW);
+    transition: all 0.3s;
+}
+
+.footer-social li:first-child a:hover {
+    background-color: #3b5999;
+    border-color: #3b5999;
+}
+
+.footer-social li:nth-child(2) a:hover {
+    background-color: #55acee;
+    border-color: #55acee;
+}
+
+.footer-social li:nth-child(3) a:hover {
+    background-color: #c00;
+    border-color: #c00;
+}
+
+.footer-social li:nth-child(4) a:hover {
+    background: linear-gradient(to right,#010101, #69C9D0, #EE1D52);
+    border-color: linear-gradient(to right,#010101, #69C9D0, #EE1D52);
+}
+
+.footer-social li:nth-child(5) a:hover {
+    background-color: #97C024;
+    border-color: #97C024;
+}
+
+.footer-social li:last-child a:hover {
+    background-color: var(--colorMain);
+    border-color: var(--colorMain);
+}
+
+footer .fa-solid {
+    padding-right: 3px;
+}
+
+.pd-left li:hover {
+    padding-left: 15px;
+    transition: all 0.8s;
+}
+
+.pd-left a {
+    display: block;
+}
+
+.pd-left .sub-title:hover,
+.pd-left .author:hover {
+    padding-left: 0;
+}
+
+.pd-left li:hover i,
+.pd-left li:hover a {
+    color: var(--colorMain);
+}
+
+.pd-left .author:hover i {
+    color: var(--colorW);
+}
+
+.footer-right p {
+    padding-bottom: 20px;
+}
+
+.mail > div {
+    height: 40px;
+    padding: 0 15px;
+    width: 250px;
+    border-radius: 4px;
+    background-color: white;
+    position: relative;
+}
+
+.mail > div input {
+    outline: none;
+    font-style: italic;
+    border: none;
+    color: var(--colorB);
+}
+
+.mail a {
+    padding: 8px;
+    margin-right: 1px;
+    font-size: 1.1rem;
+    position: absolute;
+    right: 0px;
+    background-color: var(--colorB);
+    line-height: normal;
+}
+
+.mail a:hover {
+    background-color: var(--colorMain);
+}
+
+footer > p {
+    text-align: center;
+    opacity: 0.5;
+}
