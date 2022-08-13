@@ -28,10 +28,6 @@ header {
     display: none;
 }
 
-.main {
-    margin-top: 0px;
-}
-
 .banner .banner-left {
     height: auto;
     margin-bottom: 60px;
@@ -51,7 +47,7 @@ header {
 }
 
 .btn-next {
-    left: 18%;
+    left: 8%;
 }
 
 .hot-news {
@@ -76,7 +72,6 @@ header {
 }
 
 .list-icon {
-    position: relative;
     display: block;
     margin-left: auto;
     padding: 10px 0;
@@ -88,11 +83,9 @@ header {
 }
 
 .menu {
-    position: absolute;
-    width: 100%;
     flex-direction: column;
     background-color: #252525;
-    display: none;
+    display: flex;
 }
 
 .nav-bar {
@@ -100,22 +93,13 @@ header {
 }
 
 .nav-bar li a {
-    width: 250px;
     text-align: start;
     padding-left: 20px;
 }
 
-.mobile-icon {
-    width: 250px;
-}
-
-.mobile-icon a {
-    width: auto;
-}
-
 .mobile-icon i {
     display: block;
-    margin-right: 10px;
+    margin-right: 18px;
 }
 
 .sub-nav li {
@@ -193,7 +177,6 @@ header {
 
 .news-right {
     margin-top: 30px;
-    height: 780px;
 }
 
 .more {

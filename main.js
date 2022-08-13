@@ -13,6 +13,16 @@ $(document).ready(function() {
         }
     })
 
+    var width = $(window).width()
+    if (width <= 740) {
+        var widthR = $(".mobile-css").width()
+            var widthA = widthR;
+            $(".nav-bar li a").animate({"width": `${widthA}px`})
+            $(".mobile-icon").animate({"width": `${widthA}px`})
+            $(".search > div").animate({"width": `${widthA}px`})
+    }
+    
+
     $(".go").click(function() {
         $("html").animate({
             scrollTop: 0
@@ -44,11 +54,9 @@ $(document).ready(function() {
         count++;
         if (count % 2 == 0) {
             $(".menu").show();
-            $(".main").animate({"marginTop": "350px"});
         }
         else {
             $(".menu").hide();
-            $(".main").animate({"marginTop": "0px"});
         }
     })
 
