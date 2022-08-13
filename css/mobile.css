@@ -24,7 +24,9 @@ header {
 }
 
 #real-time,
-.header-social {
+.header-social,
+.nav-bar,
+.menu .search {
     display: none;
 }
 
@@ -47,7 +49,7 @@ header {
 }
 
 .btn-next {
-    left: 8%;
+    left: 10%;
 }
 
 .hot-news {

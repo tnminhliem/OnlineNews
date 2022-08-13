@@ -19,7 +19,7 @@ $(document).ready(function() {
             var widthA = widthR;
             $(".nav-bar li a").animate({"width": `${widthA}px`})
             $(".mobile-icon").animate({"width": `${widthA}px`})
-            $(".search > div").animate({"width": `${widthA}px`})
+            $(".menu .search > div").animate({"width": `${widthA}px`})
     }
     
 
@@ -53,10 +53,12 @@ $(document).ready(function() {
     $(".list-icon i").click(function() {
         count++;
         if (count % 2 == 0) {
-            $(".menu").show();
+            $(".nav-bar").show();
+            $(".menu .search").show();
         }
         else {
-            $(".menu").hide();
+            $(".nav-bar").hide();
+            $(".menu .search").hide();
         }
     })
 
