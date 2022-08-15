@@ -4,7 +4,7 @@ header {
 }
 
 .width-main {
-    width: 93%;
+    width: 85%;
 }
 
 .col-half,
@@ -14,8 +14,7 @@ header {
 .col-fourth,
 .top-head,
 .title,
-.third-of-fourth > div,
-.sticky-width {
+.third-of-fourth > div {
     width: 100%;
 }
 
@@ -62,7 +61,7 @@ header {
 }
 
 .sticky-nav {
-    margin-top: 40px;
+    margin-top: 42px;
 }
 
 .hot-text {
@@ -74,14 +73,12 @@ header {
 .sticky-parent-mobile {
     z-index: 1000;
     position: fixed;
-    background-color: #4b4b4b;
-    width: 100%;
     top: 0;
-    margin: 0 -3.5%;
+    width: 85%;
 }
 
 .sticky-child-mobile {
-    margin: 0 20px 0 15px;
+    margin: 0;
 }
 
 .mobile-css {
@@ -248,5 +245,5 @@ header {
 }
 
 .mail > div {
-    width: 50%;
+    width: 65%;
 }

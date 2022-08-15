@@ -17,7 +17,7 @@ $(document).ready(function() {
             $(".sticky > div").addClass("sticky-child")
             $(".sticky-mobile").addClass("sticky-parent-mobile")
             $(".menu").addClass("sticky-nav")
-            $("header .width-main:nth-child(4)").removeClass("width-main").addClass("sticky-width")
+            $("header .width-main:nth-child(4)").removeClass("width-main")
             $(".sticky-mobile > div").addClass("sticky-child-mobile")
         }
         else {
@@ -26,7 +26,7 @@ $(document).ready(function() {
             $(".sticky > div").removeClass("sticky-child")
             $(".sticky-mobile").removeClass("sticky-parent-mobile")
             $(".menu").removeClass("sticky-nav")
-            $("header .width-main:nth-child(4)").removeClass("sticky-width").addClass("width-main")
+            $("header .width-main:nth-child(4)").addClass("width-main")
             $(".sticky-mobile > div").removeClass("sticky-child-mobile")
         }
     })

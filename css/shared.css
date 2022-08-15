@@ -416,7 +416,7 @@ footer .fa-solid {
     margin: 20px 10px 0 0;
     width: 35px;
     height: 35px;
-    padding: 12% 0;
+    padding: 0.7vh 0;
     text-align: center;
     font-size: 1.1rem;
     background: var(--colorW);
@@ -486,7 +486,7 @@ footer .fa-solid {
 }
 
 .mail a {
-    padding: 0.5em;
+    padding: 1.19vh;
     font-size: 1.1rem;
     position: absolute;
     right: 0px;
