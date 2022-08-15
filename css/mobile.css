@@ -3,7 +3,10 @@ header {
     height: auto;
 }
 
-.width-main,
+.width-main {
+    width: 93%;
+}
+
 .col-half,
 .col-half-sub,
 .third-of-fourth,
@@ -11,7 +14,8 @@ header {
 .col-fourth,
 .top-head,
 .title,
-.third-of-fourth > div {
+.third-of-fourth > div,
+.sticky-width {
     width: 100%;
 }
 
@@ -26,7 +30,8 @@ header {
 #real-time,
 .header-social,
 .nav-bar,
-.menu .search {
+.menu .search,
+.nav-bar li:hover .sub-nav ul {
     display: none;
 }
 
@@ -56,18 +61,30 @@ header {
     left: 50px;
 }
 
-.hot-news {
-    margin: 0 25px;
+.sticky-nav {
+    margin-top: 40px;
 }
 
 .hot-text {
-    padding: 20px 30px 20px 30px;
+    padding: 20px;
     text-align: center;
-    width: auto;
+    width: 180px;
+}
+
+.sticky-parent-mobile {
+    z-index: 1000;
+    position: fixed;
+    background-color: #4b4b4b;
+    width: 100%;
+    top: 0;
+    margin: 0 -3.5%;
+}
+
+.sticky-child-mobile {
+    margin: 0 20px 0 15px;
 }
 
 .mobile-css {
-    margin: 0 20px;
     display: flex;
 }
 
@@ -84,18 +101,12 @@ header {
 }
 
 .list-icon i {
-    padding: 0 20px;
     font-size: 1.3rem;
 }
 
 .menu {
     flex-direction: column;
-    background-color: #252525;
     display: flex;
-}
-
-.nav-bar li:hover .sub-nav ul {
-    display: none;
 }
 
 .nav-bar {
@@ -144,14 +155,6 @@ header {
 .banner-right > div:last-child,
 .third-of-fourth > div {
     margin-bottom: 0;
-}
-
-.category,
-.latest-news,
-.another-news > div,
-#footer > div,
-.banner {
-    padding: 0px 25px;
 }
 
 .another-news > div > div:last-child {
@@ -242,4 +245,8 @@ header {
 #footer > div > div {
     height: auto;
     margin-bottom: 20px;
+}
+
+.mail > div {
+    width: 50%;
 }
