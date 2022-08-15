@@ -4,24 +4,35 @@ function openPage() {
 }
 
 $(document).ready(function() {
+    $(".loading").fadeOut(4900)
+    setTimeout(function() {
+        $(".container").show()
+        document.getElementById("marquee").start()
+    }, 4400)
+
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
-            $(".go").fadeIn();
+            $(".go").fadeIn()
+            $(".sticky").addClass("sticky-parent")
+            $(".sticky > div").addClass("sticky-child")
+            $(".sticky-mobile").addClass("sticky-parent-mobile")
+            $(".mobile-css").animate({"margin": "0px"})
+            $(".sticky-mobile > div").addClass("sticky-child-mobile")
         }
         else {
-            $(".go").fadeOut();
+            $(".go").fadeOut()
+            $(".sticky").removeClass("sticky-parent")
+            $(".sticky > div").removeClass("sticky-child")
+            $(".sticky-mobile").removeClass("sticky-parent-mobile")
+            $(".mobile-css").animate({"margin": "0 20px"})
+            $(".sticky-mobile > div").removeClass("sticky-child-mobile")
         }
     })
 
-    var width = $(window).width()
-    if (width <= 740) {
-        var widthR = $(".mobile-css").width()
-            var widthA = widthR;
-            $(".nav-bar li a").animate({"width": `${widthA}px`})
-            $(".mobile-icon").animate({"width": `${widthA}px`})
-            $(".menu .search > div").animate({"width": `${widthA}px`})
+    if ($(window).width() <= 740) {
+        var width = $(".mobile-css").width()
+            $(".nav-bar li a, .mobile-icon, .menu .search > div").animate({"width": `${width}px`})
     }
-    
 
     $(".go").click(function() {
         $("html").animate({
@@ -48,49 +59,34 @@ $(document).ready(function() {
     // }, function() {
     //     $(this).find("ul:first").hide(40);
     // })
+    var idx = 1;
+    $(".list-icon i").click(function() {
+        idx++;
+        if (idx % 2 == 0) {
+            $(".nav-bar").slideDown(500);
+            $(".menu .search").slideDown(500);
+        }
+        else {
+            $(".nav-bar").hide(500);
+            $(".menu .search").hide(500);
+        }
+    })
 
     var count = 1;
-    $(".list-icon i").click(function() {
-        count++;
-        if (count % 2 == 0) {
-            $(".nav-bar").show();
-            $(".menu .search").show();
-        }
-        else {
-            $(".nav-bar").hide();
-            $(".menu .search").hide();
-        }
-    })
-
-    var idx = 1;
-    $(".mobile-icon .one").click(function() {
-        idx++;
-        if (idx % 2 == 0) {
-            $(".sub-nav .one").show()
-        }
-        else {
-            $(".sub-nav ul").hide()
-        }
-    })
-
-    $(".mobile-icon .two").click(function() {
-        idx++;
-        if (idx % 2 == 0) {
-            $(".sub-nav .two").show()
-        }
-        else {
-            $(".sub-nav ul").hide()
-        }
-    })
-
-    $(".mobile-icon .three").click(function() {
-        idx++;
-        if (idx % 2 == 0) {
-            $(".sub-nav .three").show()
-        }
-        else {
-            $(".sub-nav ul").hide()
-        }
+    $(".mobile-icon").children("i").each(function() {
+        $(this).click(function() {
+            count++;
+            if (count % 2 == 0) {
+                $(this).parent(".mobile-icon").parent("li").find(".sub-nav ul").slideDown(300)
+                $(this).removeClass("fa-chevron-down").addClass("fa-angle-up")
+                .animate({"font-size": "1.25rem"});
+            }
+            else {
+                $(this).parent(".mobile-icon").parent("li").find(".sub-nav ul").hide(300)
+                $(this).removeClass("fa-angle-up").addClass("fa-chevron-down")
+                .animate({"font-size": "1.1rem"});
+            }
+        })  
     })
 
     var titleBanners = [
@@ -102,6 +98,7 @@ $(document).ready(function() {
         "img-main/slider1.jpg",
         "img-main/slider2.jpg",
         "img-main/slider3.jpg"];
+
     var num = 0;
     var slide = document.querySelector(".mini-slider");
     var tb = document.getElementById("tb-main");
@@ -132,6 +129,8 @@ $(document).ready(function() {
     setInterval(function(){
         change_Slide()
     }, 4000);
+
+
 })
 
 function enter(e) {

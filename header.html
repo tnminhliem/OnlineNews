@@ -4,43 +4,45 @@
 </head>
 
 <body>
-    <div class="top-head flex width-main">
-        <div class="web-name">
-            <a href="#">
-                <h1>GEN-Z NEWS</h1>
-            </a>
-        </div>
+    <div class="width-main">
+        <div class="top-head flex">
+            <div class="web-name">
+                <a href="#">
+                    <h1>GEN-Z NEWS</h1>
+                </a>
+            </div>
 
-        <div id="real-time"></div>
+            <div id="real-time"></div>
 
-        <div class="header-social white-text">
-            <ul class="flex">
-                <li><a href="">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a></li>
-                <li><a href="">
-                    <i class="fa-brands fa-twitter"></i>
-                </a></li>
-                <li><a href="">
-                    <i class="fa-brands fa-youtube"></i>
-                </a></li>
-                <li><a href="">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a></li>
-                <li><a href="">
-                    <i class="fa-brands ti-android"></i>
-                </a></li>
-                <li><a href="">
-                    <i class="fa-brands fa-apple"></i>
-                </a></li>
-            </ul>
+            <div class="header-social white-text">
+                <ul class="flex">
+                    <li><a href="">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands ti-android"></i>
+                    </a></li>
+                    <li><a href="">
+                        <i class="fa-brands fa-apple"></i>
+                    </a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="width-main">
         <div class="hot-news flex">
             <div class="hot-text">TIN MỚI CẬP NHẬT</div>
-            <marquee direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+            <marquee id="marquee" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
             <p>
                 <a href="" class="hot-content">
                     Huawei Mate 40 ra mắt với tên gọi mới, có hỗ trợ 5G
@@ -82,7 +84,7 @@
         </div>
     </div>
 
-    <div class="mobile-css flex">
+    <div class="mobile-css flex sticky-mobile">
         <div id="mobile-time"></div>
 
         <div class="list-icon">
@@ -90,7 +92,7 @@
         </div>
     </div>
 
-    <div class="width-main">
+    <div class="width-main sticky">
         <div id="nav" class="menu flex">
             <ul class ="flex nav-bar">
                 <li><a href="#">TRANG CHỦ</a></li>

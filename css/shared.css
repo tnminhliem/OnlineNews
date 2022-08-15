@@ -1,5 +1,4 @@
 :root {
-    /* --colorMain: #fbc531; */
     --colorMain: #FFC312;
     --colorB: black;
     --colorW: white;
@@ -49,8 +48,118 @@ a {
     width: 25%;
 }
 
+@keyframes load {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+
+    10% {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 150px;
+        height: 150px;
+    }
+    90% {
+        width: 100px;
+        height: 100px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 100px;
+    height: 100px;
+    animation: load 1.3s linear infinite;
+    z-index: 10;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(90deg);
+    }
+    90% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.loading div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f00;
+    animation: rotate 1.3s linear infinite;
+}
+
+.loading div:first-child {
+    top: 0;
+    left: 0;
+    background-color: #f79f1f;
+}
+
+.loading div:nth-child(2) {
+    top: 0;
+    right: 0;
+    background-color: #12cbc4;
+}
+
+.loading div:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    background-color: #ed4c67;
+}
+
+.loading div:last-child {
+    bottom: 0;
+    right: 0;
+    background-color: #a3cb38;
+}
+
 header {
-    background-color: var(--colorB)
+    background-color: var(--colorB);
+}
+
+.sticky-parent {
+    z-index: 100;
+    position: fixed;
+    background-color: #010101;
+    width: 100%;
+    top: 0;
+}
+
+.sticky-child {
+    margin: 0 10%;
+}
+
+.sticky-parent-mobile {
+    z-index: 100;
+    position: fixed;
+    background-color: #010101;
+    width: 100%;
+    top: 0;
+    margin: 0 0;
+}
+
+.sticky-child-mobile {
+    margin: 0 5px 0 10px;
 }
 
 @keyframes doimau {
@@ -248,13 +357,13 @@ header {
 
 footer {
     background-color: var(--colorB);
-    padding: 60px 0;
+    padding: 30px 0 20px 0;
     line-height: 1.7;
     font-size: 1.1rem;
 }
 
 footer > div > div {
-    height: 270px;
+    height: 240px;
 }
 
 footer .fa-solid {
@@ -294,9 +403,9 @@ footer .fa-solid {
 }
 
 .title {
-    font-size: 1.7rem;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     width: calc(var(--width) + 10%);
     border-bottom: 3px double var(--colorW);
     font-weight: 700;
@@ -320,7 +429,7 @@ footer .fa-solid {
     margin: 20px 10px 0 0;
     width: 35px;
     height: 35px;
-    padding: 5px 0;
+    padding: 0.3rem 0;
     text-align: center;
     font-size: 1.1rem;
     background: var(--colorW);
@@ -390,7 +499,7 @@ footer .fa-solid {
 }
 
 .mail a {
-    padding: 8px;
+    padding: 0.5rem;
     font-size: 1.1rem;
     position: absolute;
     right: 0px;
@@ -406,4 +515,6 @@ footer .fa-solid {
 footer > p {
     text-align: center;
     opacity: 0.5;
+    font-size: 1rem;
+    font-style: italic;
 }
