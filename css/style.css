@@ -28,7 +28,8 @@
 }
 
 .banner-left:hover img,
-.banner-right > div:hover img {
+.banner-right > div:hover img,
+.mini-img:hover {
     filter: blur(2px);
 }
 
