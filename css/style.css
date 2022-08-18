@@ -1,11 +1,3 @@
-.container {
-    display: none;
-}
-
-.main {
-    padding: 40px 0 30px 0;
-}
-
 .update-news {
     padding-bottom: 30px;
 }
@@ -29,12 +21,13 @@
 
 .banner-left:hover img,
 .banner-right > div:hover img,
-.mini-img:hover {
+.mini-img:hover,
+.rc-article a:first-child:hover img {
     filter: blur(2px);
 }
 
 .btn i {
-    color: var(--colorW);
+    color: var(--colorW) !important;
     font-size: 0.9rem;
     opacity: 0.8;
     width: 28px;
@@ -64,6 +57,7 @@
 
 .title-banner {
     position: absolute;
+    color: var(--colorW) !important;
     bottom: 0;
     top: 0;
     right: 0;
@@ -75,7 +69,7 @@
 }
 
 .title-banner:hover {
-    color: var(--colorMain);
+    color: var(--colorMain) !important;
     transition: color .5s;
 }
 
@@ -102,7 +96,6 @@
 }
 
 .name {
-    color: var(--colorB);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -118,51 +111,19 @@
 }
 
 .tech:hover {
-    color: #1e90ff;
+    color: var(--tech);
 }
 
 .sports:hover {
-    color: #4cd137;
+    color: var(--sports);
 }
 
 .entertainment:hover {
-    color: #ff3f34;
+    color: var(--entertainment);
 }
 
 .another:hover {
     color: var(--colorMain);
-}
-
-.read-more {
-    margin-top: auto;
-    margin-left: auto;
-}
-
-.read-more a,
-.read-more i {
-    color: var(--colorB);
-}
-
-.read-more i {
-    font-size: 0.9rem;
-    padding: 5px 0 0 5px;
-}
-
-.read-more a,
-.read-more p {
-    font-size: 1.1rem;
-}
-
-.read-more:hover a,
-.read-more:hover p {
-    text-decoration: underline;
-}
-
-.latest-news p,
-.latest-news a,
-.latest-news i,
-.latest-news h2 {
-    color: var(--colorB);
 }
 
 .article {
@@ -243,7 +204,6 @@
 }
 
 .news-right .title {
-    color: var(--colorB);
     border-color: var(--colorB);
     width: 100%;
     font-size: 1.8rem;
@@ -273,6 +233,5 @@
 }
 
 .news-right p {
-    color: var(--colorB);
     margin-left: 20px;
 }

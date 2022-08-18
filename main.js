@@ -4,11 +4,11 @@ function openPage() {
 }
 
 $(document).ready(function() {
-    $(".loading").fadeOut(3500)
+    $(".loading").fadeOut(1500)
     setTimeout(function() {
         $(".container").show()
         document.getElementById("marquee").start()
-    }, 3000)
+    }, 1000)
 
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
             $(".sticky").removeClass("sticky-parent")
             $(".sticky > div").removeClass("sticky-child")
             $(".sticky-mobile").removeClass("sticky-parent-mobile")
-            $(".menu").removeClass("sticky-nav")
+            $(".menu").removeClass("sticky-nav").addClass("width-main")
             $("header .width-main:nth-child(4)").addClass("width-main")
             $(".sticky-mobile > div").removeClass("sticky-child-mobile")
         }
@@ -42,8 +42,10 @@ $(document).ready(function() {
         $("html").animate({
             scrollTop: footer.top
         }, 2000);
-        $(".nav-bar").hide(500)
-        $(".menu .search").hide(500)
+        if(screen.width <= 740) {
+            $(".nav-bar").hide(500)
+            $(".menu .search").hide(500)
+        }
     })
 
     const weekdays = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];

@@ -145,9 +145,6 @@ header {
     padding-bottom: 40px;
 }
 
-.category > div > div {
-    padding-bottom: 20px;
-}
 
 .banner-right > div:last-child,
 .third-of-fourth > div {
@@ -182,6 +179,14 @@ header {
 .latest-news .name {
     padding-bottom: 15px;
     border-bottom: 3px double var(--colorB);
+}
+
+.category {
+    padding-bottom: 0;
+}
+
+.category > div > div {
+    padding-bottom: 20px;
 }
 
 .name {
@@ -245,5 +250,41 @@ header {
 }
 
 .mail > div {
-    width: 65%;
+    width: 75%;
+}
+
+/* Trang chi tiet */
+.heading, .main {
+    display: block;
+}
+
+.heading .news-left,
+.content,
+.heading .news-right,
+.caption,
+.img-content,
+.recommend {
+    width: 100%;
+}
+
+.writer > p:last-child {
+    width: 50%;
+    margin-left: 20px;
+}
+.heading .news-right {
+    display: flex;
+    margin-top: 20px;
+}
+
+.heading .news-right a {
+    width: 45%;
+    margin: 0;
+}
+
+.heading .news-right a:first-child {
+    margin-right: 10px;
+}
+
+.ads {
+    margin-bottom: 0;
 }
