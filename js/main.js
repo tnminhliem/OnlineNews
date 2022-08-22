@@ -1,18 +1,27 @@
 function openPage() {
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
+    $("#header").load("header+footer/header.html");
+    $("#footer").load("header+footer/footer.html");
 }
 
+var tags = ["Công nghệ", "Sản phẩm", "Ứng dụng", "Bên lề", "Thể thao", 
+"Bóng đá", "Bóng rổ", "Esports"]
+
 $(document).ready(function() {
-    $(".loading").fadeOut(1500)
+    $(".loading").fadeOut(2500)
     setTimeout(function() {
         $(".container").show()
         document.getElementById("marquee").start()
-    }, 1000)
+    }, 2000)
+
+    $(".container-load").fadeOut(5000)
+    setTimeout(function() {
+        $(".page2").show()
+        document.getElementById("marquee").start()
+    }, 3700)
 
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
-            $(".go").fadeIn()
+            $(".go, .dark-mode, .back-to-top").fadeIn()
             $(".sticky").addClass("sticky-parent")
             $(".sticky > div").addClass("sticky-child")
             $(".sticky-mobile").addClass("sticky-parent-mobile")
@@ -21,7 +30,7 @@ $(document).ready(function() {
             $(".sticky-mobile > div").addClass("sticky-child-mobile")
         }
         else {
-            $(".go").fadeOut()
+            $(".go, .dark-mode, .back-to-top").fadeOut()
             $(".sticky").removeClass("sticky-parent")
             $(".sticky > div").removeClass("sticky-child")
             $(".sticky-mobile").removeClass("sticky-parent-mobile")
@@ -31,7 +40,63 @@ $(document).ready(function() {
         }
     })
 
-    $(".go").click(function() {
+    $("#find").keyup(function() {
+        let txt = $(this).val()
+        let h = ""
+        for (let t of tags)
+            if (t.toLowerCase().indexOf(txt.toLowerCase()) >= 0)
+                h += `<li><a href="Javascript:;">${t}</a></li>`
+
+        if (h != "") {
+            $("#recommend").html(h)
+            $("#recommend").show("350")
+        }
+
+        $("#recommend").on("click", "a", function() {
+            let txt = $(this).text()
+            $("#find").val(txt)
+            $("#recommend").hide("350")
+        })
+    })
+
+    $("#to").click(function() {
+        let c = $("#find").val()
+        switch(c) {
+            case "Công nghệ":
+            case "Sản phẩm":
+            case "Ứng dụng":
+            case "Bên lề":    
+                $(this).attr("href", "tech.html")
+                break;
+            case "Thể thao":
+            case "Bóng đá":
+            case "Bóng rổ":
+            case "Esports":
+                $(this).attr("href", "sport.html")
+                break;
+        }
+    })
+
+    $(document).click(function(event) {
+        let focus = $("#recommend")
+        if (!focus.is(event.target) && focus.has(event.target).length === 0)
+            focus.hide()
+    })
+
+    var n = 1;
+    $(".dark-mode").click(function() {
+        n++;
+        if (n % 2 == 0) {
+            $(".dark-mode i").removeClass("fa-moon").addClass("fa-sun")
+            $("html, body").addClass("dark");
+        }
+        else {
+            $(".dark-mode i").removeClass("fa-sun").addClass("fa-moon")
+            $("html, body").removeClass("dark");
+        }
+    })
+
+    $(".go, .back-to-top").click(function() {
         $("html").animate({
             scrollTop: 0
         }, 2000);
@@ -50,16 +115,8 @@ $(document).ready(function() {
 
     const weekdays = ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"];
     let d = new Date();
-    document.getElementById('real-time').innerHTML = 
-    `${weekdays[d.getDay()]}, ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
-    document.getElementById('mobile-time').innerHTML = 
-    `${weekdays[d.getDay()]}, ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
-
-    // $(".menu li").hover(function(){
-    //     $(this).find("ul:first").slideDown(225);
-    // }, function() {
-    //     $(this).find("ul:first").hide(40);
-    // })
+    $("#real-time").html(`${weekdays[d.getDay()]}, ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`)
+    $("#mobile-time").html(`${weekdays[d.getDay()]}, ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`)
 
     var idx = 1;
     $(".list-icon i").click(function() {
@@ -131,17 +188,21 @@ $(document).ready(function() {
     setInterval(function(){
         change_Slide()
     }, 4000);
-})
 
-function enter(e) {
-    if (e.keyCode == 13) {
-        sendMail();
+    function sendMail() {
+        alert("Đang mở ứng dụng mail");
+        let g = $("#body-mail").val()
+        let link = `mailto:2151050224liem@ou.edu.vn?subject=PHẢN HỒI Ý
+        KIẾN&body=${g}`
+        window.location.href = link
     }
-}
 
-function sendMail() {
-    alert("Đang mở ứng dụng mail");
-    var link = "mailto:2151050224liem@ou.edu.vn?subject=PHẢN HỒI Ý KIẾN"
-             + "&body=" + $("#body-mail").val();
-    window.location.href = link;
-}
+    $("#mailTo").click(function() {
+        sendMail()
+    })
+
+    $("#body-mail").keypress(function(event) {
+        if (event.keyCode == 13)
+            sendMail();
+    })
+})

@@ -8,7 +8,18 @@
         <div class="top-head flex">
             <div class="web-name">
                 <a href="index.html">
-                    <h1>GEN-Z NEWS</h1>
+                    <h1>
+                        <span style="--i:1;">G</span>
+                        <span style="--i:2;">E</span>
+                        <span style="--i:3;">N</span>
+                        <span style="--i:4;">-</span>
+                        <span style="--i:5;">Z</span>
+                        <span style="--i:6;">&nbsp</span>
+                        <span style="--i:7;">N</span>
+                        <span style="--i:8;">E</span>
+                        <span style="--i:9;">W</span>
+                        <span style="--i:10;">S</span>
+                    </h1>
                 </a>
             </div>
 
@@ -41,7 +52,15 @@
 
     <div class="width-main">
         <div class="hot-news flex">
-            <div class="hot-text">TIN MỚI CẬP NHẬT</div>
+            <div class="hot-text">
+                <span class="fast-flicker">T</span>in
+                <span>&nbsp</span>
+                <span class="flicker">M</span>ới
+                <span>&nbsp</span>
+                <span class="flicker">C</span>ập
+                <span>&nbsp</span>
+                <span class="flicker">N</span>hật
+            </div>
             <marquee id="marquee" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
             <p>
                 <a href="article.html" class="hot-content">
@@ -100,42 +119,42 @@
                 <li><a href="index.html">TRANG CHỦ</a></li>
                 <li>
                     <div class="mobile-icon flex">
-                        <a href="">CÔNG NGHỆ</a>
-                        <i class="fa-solid fa-chevron-down one"></i>
+                        <a href="tech.html">CÔNG NGHỆ</a>
+                        <i class="fa-solid fa-chevron-down" rel = "1"></i>
                     </div>
                     <div class="sub-nav">
                         <ul class="one">
-                            <li><a href="">Sản phẩm</a></li>
-                            <li><a href="">Ứng dụng</a></li>
-                            <li><a href="">Bên lề</a></li>
+                            <li><a href="tech.html">Sản phẩm</a></li>
+                            <li><a href="tech.html">Ứng dụng</a></li>
+                            <li><a href="tech.html">Bên lề</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li>
                     <div class="mobile-icon flex">
-                        <a href="">THỂ THAO</a>
-                        <i class="fa-solid fa-chevron-down two"></i>
+                        <a href="sport.html">THỂ THAO</a>
+                        <i class="fa-solid fa-chevron-down" rel = "2"></i>
                     </div>
                     <div class="sub-nav">
                         <ul class="two">
-                            <li><a href="">Bóng đá</a></li>
-                            <li><a href="">Bóng rổ</a></li>
-                            <li><a href="">Esports</a></li>
+                            <li><a href="sport.html">Bóng đá</a></li>
+                            <li><a href="sport.html">Bóng rổ</a></li>
+                            <li><a href="sport.html">Esports</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li>
                     <div class="mobile-icon flex">
-                        <a href="">GIẢI TRÍ</a>
-                        <i class="fa-solid fa-chevron-down three"></i>
+                        <a href="index.html">GIẢI TRÍ</a>
+                        <i class="fa-solid fa-chevron-down" rel = "3"></i>
                     </div>
                     <div class="sub-nav">
                         <ul class="three">
-                            <li><a href="">Gameshow</a></li>
-                            <li><a href="">Phim</a></li>
-                            <li><a href="">Thế giới sao</a></li>
+                            <li><a href="index.html">Gameshow</a></li>
+                            <li><a href="index.html">Phim</a></li>
+                            <li><a href="index.html">Thế giới sao</a></li>
                         </ul>
                     </div>
                     
@@ -145,21 +164,19 @@
 
             <div class="search mb">
                 <div class="flex">
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <a href="">
+                    <input type="text" placeholder="Tìm kiếm..." id="find">
+                    <a href="" id="to">
                         <i class="fa-solid fa-magnifying-glass text-white"></i>
                     </a>
+
+                    <ul id="recommend">
+
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <a href="#" class="go">
-            <i class="fa-solid fa-angle-up"></i>
-        </a>
-    </div>
-
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
