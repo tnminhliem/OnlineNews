@@ -148,16 +148,31 @@ section.main {
     border-radius: 16px;
     border: 2px solid var(--colorMain);
     margin-bottom: 20px;
-}
-
-.button:hover {
+    line-height: 1.8;
     cursor: pointer;
-    background-color: var(--colorMain);
-    transition: all .5s;
+    position: relative;
+    z-index: 1;
 }
 
-.button:hover p {
-    color: var(--colorW);
+.button::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    right: 50%;
+    bottom: -1px;
+    opacity: 0;
+    background-color: var(--colorMain);
+    border-radius: 16px;
+    border: 2px solid var(--colorMain);
+    transition: all .5s ease;
+}
+
+.button:hover::before {
+    left: -2px;
+    right: -2px;
+    opacity: 1;
+    z-index: -1;
 }
 
 .button p {
@@ -166,6 +181,10 @@ section.main {
     font-weight: 500;
     font-size: 1.2rem;
     text-align: center;
+}
+
+.button:hover p {
+    color: var(--colorW);
 }
 
 .img-content {
