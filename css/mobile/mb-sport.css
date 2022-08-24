@@ -71,10 +71,15 @@ header {
 }
 
 .sticky-parent-mobile {
-    z-index: 1000;
+    z-index: 10000;
     position: fixed;
     top: 0;
     width: 85%;
+}
+
+.sticky-parent {
+    opacity: 1;
+    transition: none;
 }
 
 .sticky-child-mobile {
@@ -307,6 +312,33 @@ header {
     align-items: center;
     text-align: center;
     padding: 30px 0 30px 0;
+}
+
+@keyframes changeLocation {
+    0% {
+        transform: translate(0%, 0%);
+        color: red;
+    }
+
+    25% {
+        opacity: 0;
+        color: #4cd137;
+    }
+
+    50% {
+        transform: translate(14%, 0%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+        color: #2072f3;
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+        color: red;
+    }
 }
 
 .main-first div h2 {

@@ -160,6 +160,33 @@ img {
     text-shadow: 1px 1px 1px black;
 }
 
+/* @keyframes changeLocation {
+    0% {
+        transform: translate(0%, 0%);
+        color: red;
+    }
+
+    25% {
+        opacity: 0;
+        color: #4cd137;
+    }
+
+    50% {
+        transform: translate(78%, 0%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+        color: #2072f3;
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+        color: red;
+    }
+} */
+
 @keyframes changeLocation {
     0% {
         transform: translate(0%, 0%);
@@ -415,6 +442,21 @@ ul li article div img {
 
 header {
     background-color: black;
+}
+
+.sticky-nav {
+    margin-top: 42px;
+}
+
+.sticky-parent-mobile {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 85%;
+}
+
+.sticky-child-mobile {
+    margin: 0;
 }
 
 .sticky-parent {
