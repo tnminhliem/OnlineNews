@@ -189,6 +189,19 @@ $(document).ready(function() {
         change_Slide()
     }, 4000);
 
+    var co = 1
+    $("#continue").click(function() {
+        co++
+        if (co % 2 == 0) {
+            $(".ar-more").fadeIn(200)
+            $("#continue p").text("thu gọn")
+        }
+        else {
+            $(".ar-more").fadeOut(200)
+            $("#continue p").text("xem tiếp")
+        }
+    })
+
     function sendMail() {
         alert("Đang mở ứng dụng mail");
         let g = $("#body-mail").val()

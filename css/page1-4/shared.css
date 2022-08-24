@@ -89,11 +89,6 @@ a {
     opacity: 0.5;
 }
 
-.dark {
-    --colorB: white;
-    --colorW: #333;
-}
-
 @keyframes load {
     0% {
         width: 100px;
