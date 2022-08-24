@@ -414,7 +414,7 @@ section.banner {
 .heading .news-right,
 .caption,
 .img-content,
-.recommend {
+.rc {
     width: 100%;
 }
 
@@ -438,4 +438,16 @@ section.banner {
 
 .ads {
     margin-bottom: 0;
+}
+
+.rc {
+    margin-top: 0;
+}
+
+.no-need > img:first-child {
+    margin-top: 0;
+}
+
+.no-need > img:last-child {
+    margin-bottom: 30px;
 }

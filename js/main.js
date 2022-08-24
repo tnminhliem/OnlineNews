@@ -195,10 +195,12 @@ $(document).ready(function() {
         if (co % 2 == 0) {
             $(".ar-more").fadeIn(200)
             $("#continue p").text("thu gọn")
+            $(".no-need > img").hide()
         }
         else {
             $(".ar-more").fadeOut(200)
             $("#continue p").text("xem tiếp")
+            $(".no-need > img").show()
         }
     })
 
