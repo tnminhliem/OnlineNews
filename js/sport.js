@@ -62,7 +62,7 @@ $(document).ready(function () {
      $(".nav-bar, .menu .search").hide(500);
    }
    var width = $(".mobile-css").width();
-   $(".nav-bar li a, .mobile-icon, .menu .search > div").animate({
+   $(".nav-bar li a, .mobile-icon, .menu .search > div, #recommend li a").animate({
      width: `${width}px`,
    });
  });

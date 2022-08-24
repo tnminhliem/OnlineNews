@@ -128,7 +128,7 @@ $(document).ready(function() {
             $(".nav-bar, .menu .search").hide(500)
         }
         var width = $(".mobile-css").width()
-            $(".nav-bar li a, .mobile-icon, .menu .search > div").animate({"width": `${width}px`})
+            $(".nav-bar li a, .mobile-icon, .menu .search > div, #recommend").animate({"width": `${width}px`})
     })
 
     var count = 1;

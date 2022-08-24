@@ -142,8 +142,6 @@ section.main {
 }
 
 .button {
-    text-align: center;
-    padding-top: 1px;
     width: 150px;
     height: 40px;
     margin: auto;
@@ -167,6 +165,7 @@ section.main {
     color: var(--colorMain);
     font-weight: 500;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 .img-content {
