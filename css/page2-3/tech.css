@@ -851,6 +851,7 @@ section.banner {
     border: .1mm solid #003242;
     background: #00aeff;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .banner-main-content button:hover {

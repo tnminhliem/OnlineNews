@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         if ($(this).scrollTop()) {
-            $(".go, .dark-mode, .back-to-top").fadeIn()
+            $(".go, .back-to-top").fadeIn()
             $(".sticky").addClass("sticky-parent")
             $(".sticky > div").addClass("sticky-child")
             $(".sticky-mobile").addClass("sticky-parent-mobile")
@@ -30,7 +30,7 @@ $(document).ready(function() {
             $(".sticky-mobile > div").addClass("sticky-child-mobile")
         }
         else {
-            $(".go, .dark-mode, .back-to-top").fadeOut()
+            $(".go, .back-to-top").fadeOut()
             $(".sticky").removeClass("sticky-parent")
             $(".sticky > div").removeClass("sticky-child")
             $(".sticky-mobile").removeClass("sticky-parent-mobile")
@@ -74,6 +74,8 @@ $(document).ready(function() {
             case "Esports":
                 $(this).attr("href", "sport.html")
                 break;
+            default:
+                break;
         }
     })
 
@@ -83,23 +85,17 @@ $(document).ready(function() {
             focus.hide()
     })
 
-    var n = 1;
-    $(".dark-mode").click(function() {
-        n++;
-        if (n % 2 == 0) {
-            $(".dark-mode i").removeClass("fa-moon").addClass("fa-sun")
-            $("html, body").addClass("dark");
-        }
-        else {
-            $(".dark-mode i").removeClass("fa-sun").addClass("fa-moon")
-            $("html, body").removeClass("dark");
-        }
-    })
-
     $(".go, .back-to-top").click(function() {
         $("html").animate({
             scrollTop: 0
         }, 2000);
+    })
+
+    $(".tech-more").click(function() {
+        var t = $(".topic-bonus").offset()
+        $("html").animate({
+            scrollTop: t.top
+        }, 2000)
     })
 
     $(".down").click(function() {
@@ -169,7 +165,7 @@ $(document).ready(function() {
         }
         slide.src = images[num];
         tb.innerHTML = titleBanners[num];
-        tb.href = "#";
+        tb.href = "article.html";
     }
 
     $(".btn-prev").click(function(){

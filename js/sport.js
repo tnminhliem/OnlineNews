@@ -17,6 +17,12 @@ $(document).ready(function () {
        }
    }, 10)
 
+   $("#loadPage").fadeTo(2000, 1)
+   setTimeout(function() {
+      $(".all").show()
+      document.getElementById("marquee").start()
+   }, 2000)
+
   // back to top body 
 
  $(window).scroll(function () {
